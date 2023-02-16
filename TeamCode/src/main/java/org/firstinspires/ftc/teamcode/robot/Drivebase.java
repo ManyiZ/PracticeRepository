@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Drivebase {
 
-    // Constructing the 4 motors used on a mecanum drive
+//    Constructing the 4 motors used on a mecanum drive
     public DcMotor leftFrontDrive;
     public DcMotor leftBackDrive;
     public DcMotor rightFrontDrive;
@@ -18,8 +18,8 @@ public class Drivebase {
 
     public Drivebase(HardwareMap hardwareMap, Telemetry telemetry){
 
-        // Gets the motor from the hub, make sure the name matches the config on the Driver hub
-        // TODO: Find out the names of each motor in the active Drive hub config
+//        Gets the motor from the hub, make sure the name matches the config on the Driver hub
+//        TODO: Pull from the branch you previously worked on using the pull tool under the Git tab
         leftFrontDrive = hardwareMap.get(DcMotor.class, "");
         leftBackDrive = hardwareMap.get(DcMotor.class, "");
         rightFrontDrive = hardwareMap.get(DcMotor.class, "");
@@ -33,15 +33,22 @@ public class Drivebase {
         telemetry.update();
     }
 
-    // TODO: Declare some variables do some math and use the setDrivePowers function to send power to the motors based on controller input
-    // hint google mecanum drive code
+//    TODO: create a function (we call meta drive) that will change the inputs based on the heading
+//          of the robot, so it drives based on a global position, ask a lead for more clarification
+    public void calculateMetaDrive(double y, double x, double rot){
+
+        calculateDrivePowers();
+    }
+
+
+
     public void calculateDrivePowers(double y, double x, double rot){
 
         setDrivePowers();
     }
 
 
-    // Sends power to the drive motors
+//    Sends power to the drive motors
     public void setDrivePowers(double lf, double lb, double rf, double rb){
         leftFrontDrive.setPower(lf);
         leftBackDrive.setPower(lb);

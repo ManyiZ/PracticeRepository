@@ -6,7 +6,7 @@ repositories {
     }
 }
 
-// TODO: change the dependencies in order to update the control hub
+// TODO: Pull from the branch you previously worked on using the pull tool under the Git tab
 // 7.0.0 was for Freight Frenzy in 2021
 
 dependencies {
@@ -22,5 +22,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'org.firstinspires.ftc:gameAssets-FreightFrenzy:1.0.0'
 
+//    TODO: follow this link to implement dashboard below:
+//    https://acmerobotics.github.io/ftc-dashboard/gettingstarted
 }
 
